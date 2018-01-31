@@ -1,0 +1,38 @@
+{
+	"user1": {
+		"steamid": "76561198143141670",
+		"api": "59AA4E69415D252A71A08AC688AABCE1",
+		"sgpath": "key2.txt",
+		"username": "themax0087",
+		"password": "Angel228ek",
+		"tradelink": "https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D182875942%26token%3DlEc3PEeu",
+		"emp": {
+			"__cfduid": "d44419c5f7355ba0749f56f320003b4a01493919186",
+			"PHPSESSID": "q2p79hhu163mv17adfee2vrv12",
+			"trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=423278099&token=nHgwPGfV"
+		},
+		"cm": {
+			"__cfduid": "dedc72860327053a36ce070d403f3781a1493919641",
+			"csrf": "KOeA47%2FYKFkM1xMzgfzXeZLJFfi8mKm8mAycs35tRsY%3D",
+			"cookie": "__cfduid=dedc72860327053a36ce070d403f3781a1493919641; currency=USD; _ym_uid=1493919640198056986; _ym_isad=1; language=ru; steamid=76561198143141670; avatar=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2Fd5%2Fd5841d29f4149eca0a89777624ac23f9f8e1c064_medium.jpg; username=cs.money%20CStrade.gg%20F%C5%82%C4%85%C5%9E%C4%A7%E2%9C%94; after_auth=true; new_1_csrf=KOeA47%2FYKFkM1xMzgfzXeZLJFfi8mKm8mAycs35tRsY%3D; trade_link=https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D182875942%26token%3DlEc3PEeu; _gat_UA-77178353-1=1; _ga=GA1.2.2093298585.1493919640; _gid=GA1.2.2131225015.1493967337"
+		}
+	},
+	"user2": {
+		"steamid": "76561198338090476",
+		"api": "3E88391886DB6BAF776BD07918F45C3D",
+		"sgpath": "key1.txt",
+		"username": "demon4130",
+		"password": "viyna2014",
+		"tradelink": "https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D377824748%26token%3DMW3VS9-s",
+		"emp": {
+			"__cfduid": "de99551145a3feca859a4c0cdf28689a51494721516",
+			"PHPSESSID": "p6f04lvb4g7lua9rdoepb43dl3",
+			"trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=377824748&token=MW3VS9-s"
+		},
+		"cm": {
+			"__cfduid": "dd89253a8155054c5d9d88480bc86ec771494731068",
+			"csrf": "5bPqGYFGOMUmZnLVyFIOJy17cHowUZNII016QXtdrNQ%3D",
+			"cookie": "__cfduid=dd89253a8155054c5d9d88480bc86ec771494731068; language=ru; _ym_uid=1494731069218582145; steamid=76561198338090476; avatar=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2F01%2F01ea0ab18d2b1bafd74e1d1d36ce94563a560405_medium.jpg; username=Satana%20cs.money; new_1_csrf=5bPqGYFGOMUmZnLVyFIOJy17cHowUZNII016QXtdrNQ%3D; trade_link=https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D377824748%26token%3DMW3VS9-s; currency=USD; _ym_isad=2; _ga=GA1.2.1092471201.1494731068; _gid=GA1.2.1871120751.1495216175"
+		}
+	}
+}

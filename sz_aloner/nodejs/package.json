@@ -1,0 +1,9 @@
+{
+	"name": "socket_bot",
+	"description": "socket for roulette bot",
+	"repository": {
+		
+	},
+	"license": "ISC",
+	"version": "1.0.0"
+}

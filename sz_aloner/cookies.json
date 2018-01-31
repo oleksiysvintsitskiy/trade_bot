@@ -1,0 +1,38 @@
+{
+	"user1": {
+		"steamid": "76561133391442886",
+		"api": "60C12D440000E5EF94FC90F4BACC066A",
+		"sgpath": "76561133391442886.maFile",
+		"username": "ne_trader3",
+		"password": "trade12345678",
+		"tradelink": "https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D431177158%26token%3DmyA4Mmf6",
+		"emp": {
+			"__cfduid": "d887d3d4dfd98fc43776a8110c8cc7bb31498235798",
+			"PHPSESSID": "4b3j9ubo6nvv81q8806b8tvvu6",
+			"trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=431177158&token=myA4Mmf6"
+		},
+		"cm": {
+			"__cfduid": "d407cd7d5b4c742f9385690b4e168e1051498235794",
+			"csrf": "%2Fs1LxQt7j5LE9FHomj%2F4%2BFqjM6WQ1wg4shHC8m%2FC1IE%3D",
+			"cookie": "__cfduid=d407cd7d5b4c742f9385690b4e168e1051498235794; _ym_uid=1498235796488165516; steamid=76561198391442886; avatar=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2Fb2%2Fb2d2337b17c747ae0e2560fdc70c21b4bdc30ef3_medium.jpg; username=lhm%20CS.MONEY%20deymes.shop; new_1_csrf=%2Fs1LxQt7j5LE9FHomj%2F4%2BFqjM6WQ1wg4shHC8m%2FC1IE%3D; trade_link=https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D431177158%26token%3DmyA4Mmf6; currency=USD; language=en; _ym_isad=2; _ga=GA1.2.1959963094.1498235795; _gid=GA1.2.1802970654.1499463402"
+		}
+	},
+	"user2": {
+		"steamid": "76561192290290489",
+		"api": "A6B77796D111D3CAD7B59DCE702B2F5E",
+		"sgpath": "76561192290290489.maFile",
+		"username": "ne_trader4",
+		"password": "trade12345678",
+		"tradelink": "https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D430024761%26token%3DIvmDwWjy",
+		"emp": {
+			"__cfduid": "dd6f236eb5fbc6f9f8d566ccdf03d4bbf1498235553",
+			"PHPSESSID": "dc6h5r70tt8aifpmce1unc31n3",
+			"trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=430024761&token=IvmDwWjy"
+		},
+		"cm": {
+			"__cfduid": "d8c99f1a44aad774b32e67869faf933271498235548",
+			"csrf": "Ryo4sVCmI8LtUVSeU4qT7p8%2F7TCxl7TrYsuOKAhKAk4%3D",
+			"cookie": "__cfduid=d8c99f1a44aad774b32e67869faf933271498235548; _ym_uid=1498235550340019607; currency=USD; _ym_isad=2; steamid=76561198390290489; avatar=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2Ffe%2Ffef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg; username=house%20CS.MONEY%20deymes.shop; after_auth=true; new_1_csrf=Ryo4sVCmI8LtUVSeU4qT7p8%2F7TCxl7TrYsuOKAhKAk4%3D; trade_link=https%3A%2F%2Fsteamcommunity.com%2Ftradeoffer%2Fnew%2F%3Fpartner%3D430024761%26token%3DIvmDwWjy; language=en; _ga=GA1.2.1260510466.1498235550; _gid=GA1.2.149155585.1498614566"
+		}
+	}
+}
