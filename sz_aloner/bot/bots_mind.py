@@ -19,25 +19,24 @@ with open('ram.json', 'r') as f:
 bot = telebot.TeleBot(config.token)
 
 for chat in chats:
-	#bot.send_message(chat, 'Ебать, чё вчера было-то?')
 	if chats[chat]["act"] == "waiting for nickname":
-		bot.send_message(chat, 'Ти там вродь мені мав свій нікнейм написать, вроде')
+		bot.send_message(chat, 'Write nickname please')
 	if chats[chat]["act"] == "waiting for sum":
-		bot.send_message(chat, 'Давай там по фасту пиши скільки вивести хочеш')
+		bot.send_message(chat, 'How much to withdraw?')
 	elif chats[chat]["act"] == "waiting for getmoney accept":
 		chats[chat]["act"] = "waiting for sum"
-		bot.send_message(chat, 'Ти там вроді мав законфірмить лавеху, але шось по пізді пішло, так шо давай пиши заново скільки лавехи хочеш')
+		bot.send_message(chat, 'Smth went wrong, write sum again.')
 	elif chats[chat]["act"] == "waiting for logfile name":
 		logs_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 		logs_markup.add(types.KeyboardButton('siziph'), types.KeyboardButton('predivider'), types.KeyboardButton('divider'), types.KeyboardButton('keys_exchanger'), types.KeyboardButton('user1'), types.KeyboardButton('user2'))
-		bot.send_message(chat, "Вибирай лог уже:", reply_markup=logs_markup)
+		bot.send_message(chat, "Choose log:", reply_markup=logs_markup)
 	else:
 		reg_test = re.search('waiting for (user[12]) logfile', chats[chat]["act"])
 		if reg_test:
 			#user = reg_test.group(1)
 			logs_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 			logs_markup.add(types.KeyboardButton('separator'), types.KeyboardButton('withdraw'), types.KeyboardButton('empauto'))
-			bot.send_message(chat, "Вибирай лог уже:", reply_markup=logs_markup)
+			bot.send_message(chat, "Choose log:", reply_markup=logs_markup)
 
 @bot.message_handler(content_types=["text"])
 def commands_messages(message):
@@ -46,10 +45,10 @@ def commands_messages(message):
 		chats[chat] = {"act": ""}
 	if message.text == '/set_user':
 		chats[chat]["act"] = "waiting for nickname"
-		bot.send_message(message.chat.id, 'Ну давай, спіздани чот')
+		bot.send_message(message.chat.id, 'Say something')
 	elif message.text == '/get_money':
 		chats[chat]["act"] = "waiting for sum"
-		bot.send_message(message.chat.id, 'Скільки нада?')
+		bot.send_message(message.chat.id, 'How much?')
 	elif message.text == '/get_log':
 		chats[chat]["act"] = "waiting for logfile name"
 		logs_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
@@ -59,7 +58,7 @@ def commands_messages(message):
 		if chats[chat]["act"] == "waiting for nickname":
 			matches = re.search(r'^[a-zA-Z0-9][a-zA-Z\-_0-9]*[a-zA-Z0-9]$', message.text)
 			if matches == None:
-				bot.send_message(message.chat.id, 'Нік може містить тільки латинські букви, цифри і знаки "-", "_", аутист')
+				bot.send_message(message.chat.id, 'Nickname may contain only latin letters, numbers and signs "-", "_"')
 			else:
 				with open('users.json', 'r') as f:
 					users = json.load(f)
@@ -88,7 +87,7 @@ def commands_messages(message):
 					USER = "user2"
 
 				if USER == "":
-					bot.send_message(message.chat.id, 'Бля, іди нахуй, я тебе не знаю.')
+					bot.send_message(message.chat.id, 'F*ck you, I dont know you.')
 					chats[chat]["act"] = ""
 				else:
 					with open('../'+USER+'.pickle', 'rb') as f:
@@ -102,7 +101,7 @@ def commands_messages(message):
 						attemts = 0
 						while (1):
 							if attemts == 3:
-								bot.send_message(message.chat.id, 'Там походу роутер над перезагрузить, я єбу.')
+								bot.send_message(message.chat.id, 'Reboot router!.')
 								chats[chat]["act"] = ""
 								break
 							try:
@@ -142,7 +141,7 @@ def commands_messages(message):
 							time.sleep(3)
 
 					if len(keys) == 0:
-						bot.send_message(message.chat.id, 'У тебе ключів ніхуя нема, ніщеброд єбаний)))')
+						bot.send_message(message.chat.id, 'No keys, man')
 						chats[chat]["act"] = ""
 					else:
 						n = len(keys)
@@ -183,8 +182,8 @@ def commands_messages(message):
 
 							with open('keys.json', 'w', encoding="utf8") as f:
 								json.dump(keys_dump, f)
-							bot.send_message(message.chat.id, 'Чотка, якраз стільки і є. Жди')
-							bot.send_message(message.chat.id, 'У тебе там в сумі {}$, якщо що.'.format(round(sum(keys)/100, 2)))
+							bot.send_message(message.chat.id, 'Wait')
+							bot.send_message(message.chat.id, 'You have {}$.'.format(round(sum(keys)/100, 2)))
 
 							trade1 = []
 							game = GameOptions.CS 
@@ -194,11 +193,11 @@ def commands_messages(message):
 							try:
 								client.make_offer(trade1, [], 76561198219924665)
 							except:
-								bot.send_message(message.chat.id, 'Там якась помилка з офером, попробуй повторить')
+								bot.send_message(message.chat.id, 'Retry!')
 								chats[chat]["act"] = ""
 								return
 
-							bot.send_message(message.chat.id, 'Офер відіслав, ждем')
+							bot.send_message(message.chat.id, 'Offer was sent, wait.')
 							
 							hrn_result = 0
 							
@@ -218,11 +217,11 @@ def commands_messages(message):
 							bot.send_message(message.chat.id, 'Ну там в сумі в тебе {}$, тільки {}$ вийде. Нормас?'.format(round(sum(keys)/100, 2), round(K[n][W]/100, 2)))
 							chats[chat]["act"] = "waiting for getmoney accept"
 			else:
-				bot.send_message(message.chat.id, 'Собери єбало і напиши нормально, яка це нахуй цена для виводу?')
+				bot.send_message(message.chat.id, 'Write адекватну price maybe?')
 		elif chats[chat]["act"] == "waiting for getmoney accept":
 			ans = message.text.lower()
 			if ans in ["да", "yes", "так", "da", "збс", "ну да", "угу", "ага"]:
-				bot.send_message(message.chat.id, 'Падажжи ебана')
+				bot.send_message(message.chat.id, 'Wait')
 				with open('keys.json', 'r') as f:
 					keys_dump = json.load(f)
 
@@ -246,7 +245,7 @@ def commands_messages(message):
 					attemts = 0
 					while (1):
 						if attemts == 3:
-							bot.send_message(message.chat.id, 'Там походу роутер над перезагрузить, я єбу.')
+							bot.send_message(message.chat.id, 'Reboot router.')
 							chats[chat]["act"] = ""
 							break
 						try:
@@ -284,11 +283,11 @@ def commands_messages(message):
 				steamchat.send_message(USER, client, "!accept", 76561198219924665)
 				bot.send_message(message.chat.id, 'Все ок, получиш {} гривин'.format(hrn_result))
 				chats[chat]["act"] = ""
-			elif ans in ["ні", "нє", "ni", "no", "ne", "ніхуя", "нихуя", "otmena", "отмена", "відміна"]:
+			elif ans in ["ні", "нє", "ni", "no", "ne", "otmena", "отмена", "відміна"]:
 				chats[chat]["act"] = ""
-				bot.send_message(message.chat.id, 'Ебать ти баклажан, хуею з тебе')
+				bot.send_message(message.chat.id, 'Okay')
 			else:
-				bot.send_message(message.chat.id, 'Ніхуя не поняв')
+				bot.send_message(message.chat.id, 'Emmmm....')
 		elif chats[chat]["act"] == "waiting for logfile name":
 			filename = ''
 			chats[chat]["act"] = ""
